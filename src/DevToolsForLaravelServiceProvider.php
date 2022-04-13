@@ -4,6 +4,7 @@ namespace Julienbourdeau\DevToolsForLaravel;
 
 use Illuminate\Support\ServiceProvider;
 use Julienbourdeau\DevToolsForLaravel\Commands\CreateDatabaseCommand;
+use Julienbourdeau\DevToolsForLaravel\Commands\UseSamePasswordForAllUsersCommand;
 
 class DevToolsForLaravelServiceProvider extends ServiceProvider
 {
@@ -43,6 +44,7 @@ class DevToolsForLaravelServiceProvider extends ServiceProvider
             // Registering package commands.
              $this->commands([
                  CreateDatabaseCommand::class,
+                 UseSamePasswordForAllUsersCommand::class,
              ]);
         }
     }
