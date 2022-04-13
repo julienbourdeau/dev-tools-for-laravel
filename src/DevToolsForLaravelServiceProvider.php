@@ -3,6 +3,7 @@
 namespace Julienbourdeau\DevToolsForLaravel;
 
 use Illuminate\Support\ServiceProvider;
+use Julienbourdeau\DevToolsForLaravel\Commands\CreateDatabaseCommand;
 
 class DevToolsForLaravelServiceProvider extends ServiceProvider
 {
@@ -40,7 +41,9 @@ class DevToolsForLaravelServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+             $this->commands([
+                 CreateDatabaseCommand::class,
+             ]);
         }
     }
 
